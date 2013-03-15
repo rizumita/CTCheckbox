@@ -10,6 +10,18 @@
 		6A99A78516E6DB8000F173B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A99A78416E6DB8000F173B2 /* Foundation.framework */; };
 		6A99A78A16E6DB8000F173B2 /* CTCheckbox.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6A99A78916E6DB8000F173B2 /* CTCheckbox.h */; };
 		6A99A78C16E6DB8000F173B2 /* CTCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A99A78B16E6DB8000F173B2 /* CTCheckbox.m */; };
+		6A99A79816E6DBA000F173B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A99A79716E6DBA000F173B2 /* UIKit.framework */; };
+		6A99A79916E6DBA000F173B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A99A78416E6DB8000F173B2 /* Foundation.framework */; };
+		6A99A79B16E6DBA000F173B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A99A79A16E6DBA000F173B2 /* CoreGraphics.framework */; };
+		6A99A7A116E6DBA000F173B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A99A79F16E6DBA000F173B2 /* InfoPlist.strings */; };
+		6A99A7A316E6DBA000F173B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A99A7A216E6DBA000F173B2 /* main.m */; };
+		6A99A7A716E6DBA000F173B2 /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A99A7A616E6DBA000F173B2 /* CTAppDelegate.m */; };
+		6A99A7A916E6DBA000F173B2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A99A7A816E6DBA000F173B2 /* Default.png */; };
+		6A99A7AB16E6DBA000F173B2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A99A7AA16E6DBA000F173B2 /* Default@2x.png */; };
+		6A99A7AD16E6DBA000F173B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A99A7AC16E6DBA000F173B2 /* Default-568h@2x.png */; };
+		6A99A7B016E6DBA000F173B2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A99A7AE16E6DBA000F173B2 /* MainStoryboard.storyboard */; };
+		6A99A7B316E6DBA000F173B2 /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A99A7B216E6DBA000F173B2 /* CTViewController.m */; };
+		6A99A7B716E6DF6600F173B2 /* CTCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A99A78B16E6DB8000F173B2 /* CTCheckbox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +43,21 @@
 		6A99A78816E6DB8000F173B2 /* CTCheckbox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTCheckbox-Prefix.pch"; sourceTree = "<group>"; };
 		6A99A78916E6DB8000F173B2 /* CTCheckbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCheckbox.h; sourceTree = "<group>"; };
 		6A99A78B16E6DB8000F173B2 /* CTCheckbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCheckbox.m; sourceTree = "<group>"; };
+		6A99A79616E6DBA000F173B2 /* CTCheckboxSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTCheckboxSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A99A79716E6DBA000F173B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6A99A79A16E6DBA000F173B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6A99A79E16E6DBA000F173B2 /* CTCheckboxSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CTCheckboxSample-Info.plist"; sourceTree = "<group>"; };
+		6A99A7A016E6DBA000F173B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6A99A7A216E6DBA000F173B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6A99A7A416E6DBA000F173B2 /* CTCheckboxSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTCheckboxSample-Prefix.pch"; sourceTree = "<group>"; };
+		6A99A7A516E6DBA000F173B2 /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
+		6A99A7A616E6DBA000F173B2 /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
+		6A99A7A816E6DBA000F173B2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6A99A7AA16E6DBA000F173B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6A99A7AC16E6DBA000F173B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6A99A7AF16E6DBA000F173B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6A99A7B116E6DBA000F173B2 /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewController.h; sourceTree = "<group>"; };
+		6A99A7B216E6DBA000F173B2 /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +69,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6A99A79316E6DBA000F173B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A99A79816E6DBA000F173B2 /* UIKit.framework in Frameworks */,
+				6A99A79916E6DBA000F173B2 /* Foundation.framework in Frameworks */,
+				6A99A79B16E6DBA000F173B2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				6A99A78616E6DB8000F173B2 /* CTCheckbox */,
+				6A99A79C16E6DBA000F173B2 /* CTCheckboxSample */,
 				6A99A78316E6DB8000F173B2 /* Frameworks */,
 				6A99A78216E6DB8000F173B2 /* Products */,
 			);
@@ -58,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				6A99A78116E6DB8000F173B2 /* libCTCheckbox.a */,
+				6A99A79616E6DBA000F173B2 /* CTCheckboxSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				6A99A78416E6DB8000F173B2 /* Foundation.framework */,
+				6A99A79716E6DBA000F173B2 /* UIKit.framework */,
+				6A99A79A16E6DBA000F173B2 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,6 +125,33 @@
 			isa = PBXGroup;
 			children = (
 				6A99A78816E6DB8000F173B2 /* CTCheckbox-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A99A79C16E6DBA000F173B2 /* CTCheckboxSample */ = {
+			isa = PBXGroup;
+			children = (
+				6A99A7A516E6DBA000F173B2 /* CTAppDelegate.h */,
+				6A99A7A616E6DBA000F173B2 /* CTAppDelegate.m */,
+				6A99A7AE16E6DBA000F173B2 /* MainStoryboard.storyboard */,
+				6A99A7B116E6DBA000F173B2 /* CTViewController.h */,
+				6A99A7B216E6DBA000F173B2 /* CTViewController.m */,
+				6A99A79D16E6DBA000F173B2 /* Supporting Files */,
+			);
+			path = CTCheckboxSample;
+			sourceTree = "<group>";
+		};
+		6A99A79D16E6DBA000F173B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A99A79E16E6DBA000F173B2 /* CTCheckboxSample-Info.plist */,
+				6A99A79F16E6DBA000F173B2 /* InfoPlist.strings */,
+				6A99A7A216E6DBA000F173B2 /* main.m */,
+				6A99A7A416E6DBA000F173B2 /* CTCheckboxSample-Prefix.pch */,
+				6A99A7A816E6DBA000F173B2 /* Default.png */,
+				6A99A7AA16E6DBA000F173B2 /* Default@2x.png */,
+				6A99A7AC16E6DBA000F173B2 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +176,23 @@
 			productReference = 6A99A78116E6DB8000F173B2 /* libCTCheckbox.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		6A99A79516E6DBA000F173B2 /* CTCheckboxSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A99A7B416E6DBA000F173B2 /* Build configuration list for PBXNativeTarget "CTCheckboxSample" */;
+			buildPhases = (
+				6A99A79216E6DBA000F173B2 /* Sources */,
+				6A99A79316E6DBA000F173B2 /* Frameworks */,
+				6A99A79416E6DBA000F173B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CTCheckboxSample;
+			productName = CTCheckboxSample;
+			productReference = 6A99A79616E6DBA000F173B2 /* CTCheckboxSample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,9 +215,25 @@
 			projectRoot = "";
 			targets = (
 				6A99A78016E6DB8000F173B2 /* CTCheckbox */,
+				6A99A79516E6DBA000F173B2 /* CTCheckboxSample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A99A79416E6DBA000F173B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A99A7A116E6DBA000F173B2 /* InfoPlist.strings in Resources */,
+				6A99A7A916E6DBA000F173B2 /* Default.png in Resources */,
+				6A99A7AB16E6DBA000F173B2 /* Default@2x.png in Resources */,
+				6A99A7AD16E6DBA000F173B2 /* Default-568h@2x.png in Resources */,
+				6A99A7B016E6DBA000F173B2 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A99A77D16E6DB8000F173B2 /* Sources */ = {
@@ -143,7 +244,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6A99A79216E6DBA000F173B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A99A7B716E6DF6600F173B2 /* CTCheckbox.m in Sources */,
+				6A99A7A316E6DBA000F173B2 /* main.m in Sources */,
+				6A99A7A716E6DBA000F173B2 /* CTAppDelegate.m in Sources */,
+				6A99A7B316E6DBA000F173B2 /* CTViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6A99A79F16E6DBA000F173B2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A99A7A016E6DBA000F173B2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6A99A7AE16E6DBA000F173B2 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A99A7AF16E6DBA000F173B2 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6A99A78D16E6DB8000F173B2 /* Debug */ = {
@@ -170,7 +301,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -193,7 +324,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -223,6 +354,31 @@
 			};
 			name = Release;
 		};
+		6A99A7B516E6DBA000F173B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CTCheckboxSample/CTCheckboxSample-Prefix.pch";
+				INFOPLIST_FILE = "CTCheckboxSample/CTCheckboxSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6A99A7B616E6DBA000F173B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CTCheckboxSample/CTCheckboxSample-Prefix.pch";
+				INFOPLIST_FILE = "CTCheckboxSample/CTCheckboxSample-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -240,6 +396,14 @@
 			buildConfigurations = (
 				6A99A79016E6DB8000F173B2 /* Debug */,
 				6A99A79116E6DB8000F173B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6A99A7B416E6DBA000F173B2 /* Build configuration list for PBXNativeTarget "CTCheckboxSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A99A7B516E6DBA000F173B2 /* Debug */,
+				6A99A7B616E6DBA000F173B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

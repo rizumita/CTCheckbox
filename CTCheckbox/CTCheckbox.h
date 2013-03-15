@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface CTCheckbox : NSObject
+@interface CTCheckbox : UIControl
 
+@property (nonatomic) BOOL checked;
+@property (nonatomic, strong) UIColor *checkboxColor;
+@property (nonatomic) float checkboxSideLength;
+@property (nonatomic, strong) UILabel *textLabel;
 @end
