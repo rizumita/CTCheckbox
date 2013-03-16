@@ -3,6 +3,8 @@ CTCheckbox
 
 CTCheckbox is a checkbox UI component library for iOS.
 
+![CTCheckbox](http://f.cl.ly/items/3d1f313G0I1z3x0c050P/Image%202013.03.16%209:14:13.png)
+
 Sample
 ===============
 
