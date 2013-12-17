@@ -11,6 +11,7 @@
 
 @interface CTViewController ()
 
+@property (nonatomic, strong) CTCheckbox *checkbox2;
 @end
 
 @implementation CTViewController
@@ -20,8 +21,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.checkbox addTarget:self action:@selector(checkboxDidChanged:) forControlEvents:UIControlEventValueChanged];
-    self.checkbox.textLabel.text = @"sample text sample text sample text";
+    self.checkbox.textLabel.text = @"sample text sample text";
     [self checkboxDidChanged:self.checkbox];
+
+    self.checkbox2 = [[CTCheckbox alloc] initWithFrame:CGRectMake(20.0, 200.0, 280.0, 20.0)];
+    self.checkbox2.textLabel.text= @"by initWithFrame:";
+    [self.view addSubview:self.checkbox2];
 }
 
 - (void)checkboxDidChanged:(CTCheckbox *)checkbox {
