@@ -5,7 +5,7 @@ CTCheckbox is a checkbox UI component library for iOS 5+,
 
 ![Screenshot](https://raw.github.com/rizumita/CTCheckbox/master/screenshot.png)
 
-Sample
+Usage
 ===============
 
 You put UIView on a storyboard and change it's class to CTCheckbox.
