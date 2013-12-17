@@ -17,7 +17,12 @@ UIViewController
 [self.checkbox addTarget:self action:@selector(checkboxDidChanged:) forControlEvents:UIControlEventValueChanged];
 self.checkbox.textLabel.text = @"Label text";
 ```
-
+```Objective-C
+- (void)checkboxDidChanged:(CTCheckbox *)checkbox
+{
+    NSLog(@"%d", checkbox.checked);
+}
+```
 Or create using initWithFrame:.
 
 License
