@@ -1,9 +1,9 @@
 CTCheckbox
 ==========
 
-CTCheckbox is a checkbox UI component library for iOS.
+CTCheckbox is a checkbox UI component library for iOS 5+,
 
-![CTCheckbox](http://f.cl.ly/items/3d1f313G0I1z3x0c050P/Image%202013.03.16%209:14:13.png)
+![Screenshot](https://raw.github.com/rizumita/CTCheckbox/master/screenshot.png)
 
 Sample
 ===============
@@ -18,7 +18,7 @@ UIViewController
 self.checkbox.textLabel.text = @"Label text";
 ```
 
-Or create using [[CTCheckbox alloc] initWithFrame:].
+Or create using initWithFrame:.
 
 License
 ===============
