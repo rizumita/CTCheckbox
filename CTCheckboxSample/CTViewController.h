@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet CTCheckbox *checkbox;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+
 - (IBAction)blackButtonTapped:(id)sender;
 - (IBAction)blueButtonTapped:(id)sender;
 - (IBAction)redButtonTapped:(id)sender;
