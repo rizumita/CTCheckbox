@@ -12,6 +12,7 @@
 @interface CTViewController ()
 
 @property (nonatomic, strong) CTCheckbox *checkbox2;
+@property (nonatomic, strong) CTCheckbox *checkbox3;
 @end
 
 @implementation CTViewController
@@ -25,11 +26,17 @@
     [self checkboxDidChanged:self.checkbox];
 
     self.checkbox2 = [[CTCheckbox alloc] initWithFrame:CGRectMake(20.0, 200.0, 280.0, 20.0)];
-    self.checkbox2.textLabel.text= @"by initWithFrame:";
+    self.checkbox2.textLabel.text = @"by initWithFrame:";
     [self.view addSubview:self.checkbox2];
+
+    self.checkbox3 = [[CTCheckbox alloc] initWithFrame:CGRectMake(20.0, 240.0, 280.0, 40.0)];
+    self.checkbox3.checkboxSideLength = 40.0;
+    self.checkbox3.textLabel.text = @"checkboxSideLength is 40.0";
+    [self.view addSubview:self.checkbox3];
 }
 
-- (void)checkboxDidChanged:(CTCheckbox *)checkbox {
+- (void)checkboxDidChanged:(CTCheckbox *)checkbox
+{
     if (checkbox.checked) {
         self.label.text = @"Checked";
     } else {
@@ -43,23 +50,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)blackButtonTapped:(id)sender {
-    self.checkbox.checkboxColor=[UIColor blackColor];
+- (IBAction)blackButtonTapped:(id)sender
+{
+    self.checkbox.checkboxColor = [UIColor blackColor];
     [self.checkbox setNeedsDisplay];
 }
 
-- (IBAction)blueButtonTapped:(id)sender {
-    self.checkbox.checkboxColor=[UIColor blueColor];
+- (IBAction)blueButtonTapped:(id)sender
+{
+    self.checkbox.checkboxColor = [UIColor blueColor];
     [self.checkbox setNeedsDisplay];
 }
 
-- (IBAction)redButtonTapped:(id)sender {
-    self.checkbox.checkboxColor=[UIColor redColor];
+- (IBAction)redButtonTapped:(id)sender
+{
+    self.checkbox.checkboxColor = [UIColor redColor];
     [self.checkbox setNeedsDisplay];
 }
 
-- (IBAction)textChanged:(id)sender {
-    self.checkbox.textLabel.text= [(UITextField *)sender text];
+- (IBAction)textChanged:(id)sender
+{
+    self.checkbox.textLabel.text = [(UITextField *)sender text];
+}
+
+#pragma mark - UITextField delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
