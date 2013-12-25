@@ -10,9 +10,10 @@
 
 @class CTCheckbox;
 
-@interface CTViewController : UIViewController
+@interface CTViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet CTCheckbox *checkbox;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 - (IBAction)blackButtonTapped:(id)sender;
