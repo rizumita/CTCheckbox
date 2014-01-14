@@ -15,4 +15,9 @@
 @property (nonatomic, strong) UIColor *checkboxColor;
 @property (nonatomic) float checkboxSideLength;
 @property (nonatomic, strong) UILabel *textLabel;
+
+- (void)setColor:(UIColor *)color forControlState:(UIControlState)state;
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor forControlState:(UIControlState)state;
+
 @end

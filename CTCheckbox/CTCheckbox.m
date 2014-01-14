@@ -10,6 +10,11 @@
 
 static const float CTCheckboxDefaultSideLength = 20.0;
 
+@interface CTCheckbox ()
+@property (nonatomic, strong) NSMutableDictionary *colorDictionary;
+@property (nonatomic, strong) NSMutableDictionary *backgroundColorDictionary;
+@end
+
 @implementation CTCheckbox
 
 - (id)initWithFrame:(CGRect)frame
@@ -32,12 +37,76 @@ static const float CTCheckboxDefaultSideLength = 20.0;
 
 - (void)setUp
 {
+    self.colorDictionary = [NSMutableDictionary dictionary];
+    self.backgroundColorDictionary = [NSMutableDictionary dictionary];
+
     self.checkboxSideLength = CTCheckboxDefaultSideLength;
     self.checkboxColor = [UIColor blackColor];
     self.backgroundColor = [UIColor clearColor];
     self.textLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.textLabel.backgroundColor = [UIColor clearColor];
     [self addSubview:self.textLabel];
+
+    [self addObserver:self forKeyPath:@"enabled" options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)dealloc
+{
+    [self removeObserver:self forKeyPath:@"enabled"];
+    [self removeObserver:self forKeyPath:@"selected"];
+    [self removeObserver:self forKeyPath:@"highlighted"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if ([keyPath isEqualToString:@"enabled"] || [keyPath isEqualToString:@"selected"] || [keyPath isEqualToString:@"highlighted"]) {
+        [self changeColorForState:self.state];
+        [self changeBackgroundColorForState:self.state];
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+- (void)changeColorForState:(UIControlState)state
+{
+    UIColor *color;
+
+    if (state & UIControlStateNormal) {
+        color = self.colorDictionary[@(UIControlStateNormal)];
+    } else if (state & UIControlStateSelected) {
+        color = self.colorDictionary[@(UIControlStateSelected)];
+    } else if (state & UIControlStateDisabled) {
+        color = self.colorDictionary[@(UIControlStateDisabled)];
+    }
+
+    if (!color) {
+        color = [UIColor blackColor];
+    }
+
+    self.checkboxColor = color;
+    self.textLabel.textColor = color;
+}
+
+- (void)changeBackgroundColorForState:(UIControlState)state
+{
+    UIColor *color;
+
+    if (state & UIControlStateNormal) {
+        color = self.backgroundColorDictionary[@(UIControlStateNormal)];
+    } else if (state & UIControlStateSelected) {
+        color = self.backgroundColorDictionary[@(UIControlStateSelected)];
+    } else if (state & UIControlStateDisabled) {
+        color = self.backgroundColorDictionary[@(UIControlStateDisabled)];
+    }
+
+    if (!color) {
+        color = [UIColor clearColor];
+    }
+
+    self.backgroundColor = color;
 }
 
 - (void)setChecked:(BOOL)checked
@@ -47,6 +116,39 @@ static const float CTCheckboxDefaultSideLength = 20.0;
     [self setNeedsDisplay];
 
     [self sendActionsForControlEvents:UIControlEventValueChanged];
+}
+
+- (void)setCheckboxColor:(UIColor *)checkboxColor
+{
+    _checkboxColor = checkboxColor;
+    [self setNeedsDisplay];
+}
+
+
+- (void)setColor:(UIColor *)color forControlState:(UIControlState)state
+{
+    if (state & UIControlStateNormal) {
+        self.colorDictionary[@(UIControlStateNormal)] = color;
+    } else if (state & UIControlStateSelected) {
+        self.colorDictionary[@(UIControlStateSelected)] = color;
+    } else if (state & UIControlStateDisabled) {
+        self.colorDictionary[@(UIControlStateDisabled)] = color;
+    }
+
+    [self changeColorForState:self.state];
+}
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor forControlState:(UIControlState)state
+{
+    if (state & UIControlStateNormal) {
+        self.backgroundColorDictionary[@(UIControlStateNormal)] = backgroundColor;
+    } else if (state & UIControlStateSelected) {
+        self.backgroundColorDictionary[@(UIControlStateSelected)] = backgroundColor;
+    } else if (state & UIControlStateDisabled) {
+        self.backgroundColorDictionary[@(UIControlStateDisabled)] = backgroundColor;
+    }
+
+    [self changeBackgroundColorForState:self.state];
 }
 
 - (void)drawRect:(CGRect)rect

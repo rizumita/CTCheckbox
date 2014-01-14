@@ -20,4 +20,6 @@
 - (IBAction)blueButtonTapped:(id)sender;
 - (IBAction)redButtonTapped:(id)sender;
 - (IBAction)textChanged:(id)sender;
+- (IBAction)normalButtonTapped:(id)sender;
+- (IBAction)disableButtonTapped:(id)sender;
 @end

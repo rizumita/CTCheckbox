@@ -23,13 +23,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self.checkbox addTarget:self action:@selector(checkboxDidChanged:) forControlEvents:UIControlEventValueChanged];
     self.checkbox.textLabel.text = @"sample text sample text";
+    [self.checkbox setColor:[UIColor blackColor] forControlState:UIControlStateNormal];
+    [self.checkbox setColor:[UIColor grayColor] forControlState:UIControlStateDisabled];
     [self checkboxDidChanged:self.checkbox];
 
-    self.checkbox2 = [[CTCheckbox alloc] initWithFrame:CGRectMake(20.0, 200.0, 280.0, 20.0)];
+    self.checkbox2 = [[CTCheckbox alloc] initWithFrame:CGRectMake(20.0, 220.0, 280.0, 20.0)];
     self.checkbox2.textLabel.text = @"by initWithFrame:";
     [self.view addSubview:self.checkbox2];
 
-    self.checkbox3 = [[CTCheckbox alloc] initWithFrame:CGRectMake(20.0, 240.0, 280.0, 40.0)];
+    self.checkbox3 = [[CTCheckbox alloc] initWithFrame:CGRectMake(20.0, 260.0, 280.0, 40.0)];
     self.checkbox3.checkboxSideLength = 40.0;
     self.checkbox3.textLabel.text = @"checkboxSideLength is 40.0";
     [self.view addSubview:self.checkbox3];
@@ -53,24 +55,29 @@
 - (IBAction)blackButtonTapped:(id)sender
 {
     self.checkbox.checkboxColor = [UIColor blackColor];
-    [self.checkbox setNeedsDisplay];
 }
 
 - (IBAction)blueButtonTapped:(id)sender
 {
     self.checkbox.checkboxColor = [UIColor blueColor];
-    [self.checkbox setNeedsDisplay];
 }
 
 - (IBAction)redButtonTapped:(id)sender
 {
     self.checkbox.checkboxColor = [UIColor redColor];
-    [self.checkbox setNeedsDisplay];
 }
 
 - (IBAction)textChanged:(id)sender
 {
     self.checkbox.textLabel.text = [(UITextField *)sender text];
+}
+
+- (IBAction)normalButtonTapped:(id)sender {
+    self.checkbox.enabled = YES;
+}
+
+- (IBAction)disableButtonTapped:(id)sender {
+    self.checkbox.enabled = NO;
 }
 
 #pragma mark - UITextField delegate
