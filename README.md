@@ -14,11 +14,11 @@ UIViewController
 @property (weak, nonatomic) IBOutlet CTCheckbox *checkbox;
 ```
 ```Objective-C
-[self.checkbox addTarget:self action:@selector(checkboxDidChanged:) forControlEvents:UIControlEventValueChanged];
+[self.checkbox addTarget:self action:@selector(checkboxDidChange:) forControlEvents:UIControlEventValueChanged];
 self.checkbox.textLabel.text = @"Label text";
 ```
 ```Objective-C
-- (void)checkboxDidChanged:(CTCheckbox *)checkbox
+- (void)checkboxDidChange:(CTCheckbox *)checkbox
 {
     NSLog(@"%d", checkbox.checked);
 }
