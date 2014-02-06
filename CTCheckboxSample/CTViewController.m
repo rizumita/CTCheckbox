@@ -21,11 +21,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.checkbox addTarget:self action:@selector(checkboxDidChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.checkbox addTarget:self action:@selector(checkboxDidChange:) forControlEvents:UIControlEventValueChanged];
     self.checkbox.textLabel.text = @"sample text sample text";
     [self.checkbox setColor:[UIColor blackColor] forControlState:UIControlStateNormal];
     [self.checkbox setColor:[UIColor grayColor] forControlState:UIControlStateDisabled];
-    [self checkboxDidChanged:self.checkbox];
+    [self checkboxDidChange:self.checkbox];
 
     self.checkbox2 = [[CTCheckbox alloc] initWithFrame:CGRectMake(20.0, 220.0, 280.0, 20.0)];
     self.checkbox2.textLabel.text = @"by initWithFrame:";
@@ -37,7 +37,7 @@
     [self.view addSubview:self.checkbox3];
 }
 
-- (void)checkboxDidChanged:(CTCheckbox *)checkbox
+- (void)checkboxDidChange:(CTCheckbox *)checkbox
 {
     if (checkbox.checked) {
         self.label.text = @"Checked";
