@@ -74,14 +74,20 @@ static const float CTCheckboxDefaultSideLength = 20.0;
 {
     UIColor *color;
 
-    if (state & UIControlStateNormal) {
+    switch (state) {
+      case UIControlStateNormal:
         color = self.colorDictionary[@(UIControlStateNormal)];
-    } else if (state & UIControlStateSelected) {
+        break;
+      case UIControlStateSelected:
         color = self.colorDictionary[@(UIControlStateSelected)];
-    } else if (state & UIControlStateDisabled) {
+        break;
+      case UIControlStateDisabled:
         color = self.colorDictionary[@(UIControlStateDisabled)];
+        break;
+      default:
+        break;
     }
-
+  
     if (!color) {
         color = [UIColor blackColor];
     }
@@ -94,14 +100,20 @@ static const float CTCheckboxDefaultSideLength = 20.0;
 {
     UIColor *color;
 
-    if (state & UIControlStateNormal) {
+    switch (state) {
+      case UIControlStateNormal:
         color = self.backgroundColorDictionary[@(UIControlStateNormal)];
-    } else if (state & UIControlStateSelected) {
+        break;
+      case UIControlStateSelected:
         color = self.backgroundColorDictionary[@(UIControlStateSelected)];
-    } else if (state & UIControlStateDisabled) {
+        break;
+      case UIControlStateDisabled:
         color = self.backgroundColorDictionary[@(UIControlStateDisabled)];
+        break;
+      default:
+        break;
     }
-
+  
     if (!color) {
         color = [UIColor clearColor];
     }
@@ -127,27 +139,40 @@ static const float CTCheckboxDefaultSideLength = 20.0;
 
 - (void)setColor:(UIColor *)color forControlState:(UIControlState)state
 {
-    if (state & UIControlStateNormal) {
+  switch (state) {
+      case UIControlStateNormal:
         self.colorDictionary[@(UIControlStateNormal)] = color;
-    } else if (state & UIControlStateSelected) {
+        break;
+      case UIControlStateSelected:
         self.colorDictionary[@(UIControlStateSelected)] = color;
-    } else if (state & UIControlStateDisabled) {
+        break;
+      case UIControlStateDisabled:
         self.colorDictionary[@(UIControlStateDisabled)] = color;
+        break;
+      default:
+        break;
     }
-
+  
     [self changeColorForState:self.state];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor forControlState:(UIControlState)state
 {
-    if (state & UIControlStateNormal) {
+    switch (state) {
+      case UIControlStateNormal:
         self.backgroundColorDictionary[@(UIControlStateNormal)] = backgroundColor;
-    } else if (state & UIControlStateSelected) {
+        break;
+      case UIControlStateSelected:
         self.backgroundColorDictionary[@(UIControlStateSelected)] = backgroundColor;
-    } else if (state & UIControlStateDisabled) {
+        break;
+      case UIControlStateDisabled:
         self.backgroundColorDictionary[@(UIControlStateDisabled)] = backgroundColor;
+        break;
+      default:
+        break;
     }
-
+  
+  
     [self changeBackgroundColorForState:self.state];
 }
 
@@ -184,13 +209,10 @@ static const float CTCheckboxDefaultSideLength = 20.0;
     CGFloat textLabelOriginX = self.checkboxSideLength + 5.0;
     CGSize textLabelMaxSize = CGSizeMake(CGRectGetWidth(self.bounds) - textLabelOriginX, CGRectGetHeight(self.bounds));
 
-    CGSize textLabelSize;
-    if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending) {
-        textLabelSize = [self.textLabel.text sizeWithAttributes:@{NSFontAttributeName : self.textLabel.font}];
-    } else {
-        textLabelSize = [self.textLabel.text sizeWithFont:self.textLabel.font constrainedToSize:textLabelMaxSize lineBreakMode:self.textLabel.lineBreakMode];
-    }
-
+    CGRect r = [self.textLabel.text boundingRectWithSize:textLabelMaxSize options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) attributes:@{NSFontAttributeName:self.textLabel.font} context:nil];
+  
+    CGSize textLabelSize = CGSizeMake(r.size.width, r.size.height);
+  
     self.textLabel.frame = CGRectIntegral(CGRectMake(textLabelOriginX, (CGRectGetHeight(self.bounds) - textLabelSize.height) / 2.0, textLabelSize.width, textLabelSize.height));
 }
 
