@@ -20,4 +20,6 @@
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor forControlState:(UIControlState)state;
 
+-(void)setChecked:(BOOL)checked withEvent:(BOOL)withEvent;
+
 @end
