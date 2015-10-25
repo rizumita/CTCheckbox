@@ -123,11 +123,16 @@ static const float CTCheckboxDefaultSideLength = 20.0;
 
 - (void)setChecked:(BOOL)checked
 {
+    [self setChecked:checked withEvent:YES];
+}
+-(void)setChecked:(BOOL)checked withEvent:(BOOL)withEvent
+{
     _checked = checked;
-
+    
     [self setNeedsDisplay];
-
-    [self sendActionsForControlEvents:UIControlEventValueChanged];
+    
+    if(withEvent)
+        [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 - (void)setCheckboxColor:(UIColor *)checkboxColor
